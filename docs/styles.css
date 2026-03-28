@@ -28,11 +28,19 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(47, 183, 163, 0.18), transparent 28%),
-    radial-gradient(circle at top right, rgba(238, 113, 12, 0.22), transparent 32%),
+    radial-gradient(
+      circle at top left,
+      rgba(47, 183, 163, 0.18),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(238, 113, 12, 0.22),
+      transparent 32%
+    ),
     linear-gradient(180deg, #10172d 0%, #0b1120 100%);
   color: var(--text);
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 a {
@@ -52,8 +60,7 @@ button {
 
 .topbar,
 .hero,
-.demo-grid,
-.deploy-grid {
+.demo-grid {
   display: grid;
   gap: 24px;
 }
@@ -86,7 +93,7 @@ button {
 .brand-lockup h1,
 .hero-copy h2,
 .panel h3 {
-  font-family: 'Fraunces', serif;
+  font-family: "Fraunces", serif;
   margin: 0;
 }
 
@@ -109,7 +116,6 @@ button {
   gap: 12px;
 }
 
-.status-pill,
 .summary-pill,
 .badge {
   border: 1px solid var(--line);
@@ -117,7 +123,6 @@ button {
   background: rgba(255, 255, 255, 0.04);
 }
 
-.status-pill,
 .badge {
   display: inline-flex;
   align-items: center;
@@ -207,15 +212,15 @@ button {
 
 .highlight-card {
   background:
-    linear-gradient(135deg, rgba(238, 113, 12, 0.12), rgba(38, 96, 165, 0.1)), var(--panel);
+    linear-gradient(135deg, rgba(238, 113, 12, 0.12), rgba(38, 96, 165, 0.1)),
+    var(--panel);
 }
 
 .muted-card {
   border-style: dashed;
 }
 
-.highlight-card ul,
-.deploy-card ol {
+.highlight-card ul {
   margin: 16px 0 0;
   padding-left: 20px;
   color: var(--muted);
@@ -298,8 +303,7 @@ button {
 }
 
 .selection-card p,
-.selection-card li,
-.deploy-card p {
+.selection-card li {
   color: var(--muted);
   line-height: 1.65;
 }
@@ -380,19 +384,13 @@ button {
   font-size: 1.08rem;
 }
 
-.deploy-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.secondary-card {
-  background:
-    linear-gradient(135deg, rgba(38, 96, 165, 0.12), rgba(47, 183, 163, 0.08)), var(--panel);
+.cta-panel {
+  margin-top: 24px;
 }
 
 @media (max-width: 960px) {
   .hero,
   .demo-grid,
-  .deploy-grid,
   .topbar {
     grid-template-columns: 1fr;
   }

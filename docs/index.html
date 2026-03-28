@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>A Explorar Demo | GitHub Pages</title>
+    <title>A Explorar | Vidriera</title>
     <meta
       name="description"
-      content="Demo estática de TripPlannerIA para GitHub Pages. Muestra la propuesta visual, el flujo de conversación y una cotización mock del producto."
+      content="Vidriera de A Explorar con experiencia de muestra y acceso directo a la demo real."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,19 +29,11 @@
         <nav class="topbar-actions">
           <a
             class="ghost-button"
-            href="https://github.com/moliveto/aexplorar"
+            href="https://aexplorar.vercel.app/"
             target="_blank"
             rel="noreferrer"
-            >Repositorio</a
+            >Abrir demo real</a
           >
-          <a
-            class="ghost-button"
-            href="https://github.com/moliveto/aexplorar/deployments/github-pages"
-            target="_blank"
-            rel="noreferrer"
-            >Deployments</a
-          >
-          <span class="status-pill">Demo estática</span>
         </nav>
       </header>
 
@@ -51,12 +43,18 @@
             <p class="eyebrow">Agencia de viajes con IA</p>
             <h2>Una vidriera estática para mostrar el producto sin backend.</h2>
             <p class="hero-text">
-              Esta versión está pensada para GitHub Pages: conserva la narrativa, el look and feel y
-              una cotización de muestra, pero no ejecuta el chat real ni las APIs de Next.js.
+              Esta vidriera presenta la experiencia, escenarios y cotización de
+              muestra para uso comercial.
             </p>
             <div class="hero-actions">
               <a class="primary-button" href="#demo">Ver experiencia</a>
-              <a class="ghost-button" href="#deploy">Cómo desplegar la app real</a>
+              <a
+                class="ghost-button"
+                href="https://aexplorar.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                >Ir a la demo real</a
+              >
             </div>
           </div>
           <div class="hero-panel">
@@ -70,8 +68,20 @@
               </ul>
             </div>
             <div class="hero-card muted-card">
-              <p class="mini-label">Stack real</p>
-              <p>Next.js 15, React 19, Vercel AI SDK, Upstash, Stripe, Resend.</p>
+              <p class="mini-label">Demo enlazada</p>
+              <p>
+                Si querés probar la aplicación funcional, abrila directamente en
+                Vercel.
+              </p>
+              <p>
+                <a
+                  class="ghost-button"
+                  href="https://aexplorar.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >https://aexplorar.vercel.app/</a
+                >
+              </p>
             </div>
           </div>
         </section>
@@ -81,17 +91,37 @@
             <p class="eyebrow">Escenarios</p>
             <h3>Elegí una propuesta de muestra</h3>
           </div>
-          <div class="switcher-controls" role="tablist" aria-label="Destinos de demo">
-            <button class="switcher-button active" data-destination="cancun" type="button">
+          <div
+            class="switcher-controls"
+            role="tablist"
+            aria-label="Destinos de demo"
+          >
+            <button
+              class="switcher-button active"
+              data-destination="cancun"
+              type="button"
+            >
               Cancún
             </button>
-            <button class="switcher-button" data-destination="miami" type="button">
+            <button
+              class="switcher-button"
+              data-destination="miami"
+              type="button"
+            >
               Miami
             </button>
-            <button class="switcher-button" data-destination="maldivas" type="button">
+            <button
+              class="switcher-button"
+              data-destination="maldivas"
+              type="button"
+            >
               Maldivas
             </button>
-            <button class="switcher-button" data-destination="floripa" type="button">
+            <button
+              class="switcher-button"
+              data-destination="floripa"
+              type="button"
+            >
               Florianópolis
             </button>
           </div>
@@ -138,7 +168,9 @@
           </div>
 
           <div class="quote-breakdown">
-            <div class="breakdown-row"><span>Vuelos</span><strong id="price-flight"></strong></div>
+            <div class="breakdown-row">
+              <span>Vuelos</span><strong id="price-flight"></strong>
+            </div>
             <div class="breakdown-row">
               <span>Alojamiento</span><strong id="price-hotel"></strong>
             </div>
@@ -154,35 +186,20 @@
           </div>
         </section>
 
-        <section class="deploy-grid" id="deploy">
-          <article class="panel deploy-card">
-            <p class="eyebrow">Deploy real</p>
-            <h3>Vercel para la app completa</h3>
-            <p>
-              El producto real necesita runtime Node.js para `app/api`, Redis, Stripe, Resend y
-              streaming del chat. La opción correcta es desplegar `apps/web` en Vercel.
-            </p>
-            <ol>
-              <li>Importar el repo en Vercel.</li>
-              <li>Elegir `apps/web` como root.</li>
-              <li>Cargar las variables de entorno.</li>
-              <li>Deploy con datos mock o con proveedores reales.</li>
-            </ol>
-          </article>
-
-          <article class="panel deploy-card secondary-card">
-            <p class="eyebrow">Publish rápido</p>
-            <h3>GitHub Pages para vidriera</h3>
-            <p>
-              Esta carpeta `docs/` se publica con GitHub Actions y sirve como demo comercial o
-              portfolio técnico, sin depender del backend.
-            </p>
-            <ol>
-              <li>Activar `GitHub Actions` en `Settings → Pages`.</li>
-              <li>Hacer push a `main`.</li>
-              <li>Compartir la URL pública de Pages.</li>
-            </ol>
-          </article>
+        <section class="panel cta-panel">
+          <div class="panel-header split-header">
+            <div>
+              <p class="eyebrow">Demo funcional</p>
+              <h3>Probala en vivo</h3>
+            </div>
+            <a
+              class="primary-button"
+              href="https://aexplorar.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              >Abrir https://aexplorar.vercel.app/</a
+            >
+          </div>
         </section>
       </main>
     </div>
