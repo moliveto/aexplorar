@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A Explorar Demo | GitHub Pages</title>
+    <meta
+      name="description"
+      content="Demo estática de TripPlannerIA para GitHub Pages. Muestra la propuesta visual, el flujo de conversación y una cotización mock del producto."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <div class="brand-mark">AE</div>
+          <div>
+            <p class="eyebrow">GitHub Pages Demo</p>
+            <h1>A Explorar</h1>
+          </div>
+        </div>
+        <nav class="topbar-actions">
+          <a
+            class="ghost-button"
+            href="https://github.com/moliveto/planmytripia"
+            target="_blank"
+            rel="noreferrer"
+            >Repositorio</a
+          >
+          <span class="status-pill">Demo estática</span>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Agencia de viajes con IA</p>
+            <h2>Una vidriera estática para mostrar el producto sin backend.</h2>
+            <p class="hero-text">
+              Esta versión está pensada para GitHub Pages: conserva la narrativa, el look and feel y
+              una cotización de muestra, pero no ejecuta el chat real ni las APIs de Next.js.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-button" href="#demo">Ver experiencia</a>
+              <a class="ghost-button" href="#deploy">Cómo desplegar la app real</a>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <div class="hero-card highlight-card">
+              <span class="badge">Demo publishable</span>
+              <h3>Qué podés mostrar desde Pages</h3>
+              <ul>
+                <li>Marca, interfaz y tono del producto</li>
+                <li>Flujo de asesoramiento guiado</li>
+                <li>Cotización mock con pricing consistente</li>
+              </ul>
+            </div>
+            <div class="hero-card muted-card">
+              <p class="mini-label">Stack real</p>
+              <p>Next.js 15, React 19, Vercel AI SDK, Upstash, Stripe, Resend.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="destination-switcher" id="demo">
+          <div>
+            <p class="eyebrow">Escenarios</p>
+            <h3>Elegí una propuesta de muestra</h3>
+          </div>
+          <div class="switcher-controls" role="tablist" aria-label="Destinos de demo">
+            <button class="switcher-button active" data-destination="cancun" type="button">
+              Cancún
+            </button>
+            <button class="switcher-button" data-destination="miami" type="button">
+              Miami
+            </button>
+            <button class="switcher-button" data-destination="maldivas" type="button">
+              Maldivas
+            </button>
+            <button class="switcher-button" data-destination="floripa" type="button">
+              Florianópolis
+            </button>
+          </div>
+        </section>
+
+        <section class="demo-grid">
+          <article class="panel conversation-panel">
+            <div class="panel-header">
+              <p class="eyebrow">Conversación de ejemplo</p>
+              <h3>Chat guiado</h3>
+            </div>
+            <div class="chat-thread" id="chat-thread"></div>
+          </article>
+
+          <article class="panel itinerary-panel">
+            <div class="panel-header">
+              <p class="eyebrow">Selección recomendada</p>
+              <h3>Vuelo, hotel y actividades</h3>
+            </div>
+            <div class="selection-stack">
+              <section class="selection-card" id="flight-card"></section>
+              <section class="selection-card" id="hotel-card"></section>
+              <section class="selection-card" id="activity-card"></section>
+            </div>
+          </article>
+        </section>
+
+        <section class="quote-panel panel">
+          <div class="panel-header split-header">
+            <div>
+              <p class="eyebrow">Cotización mock</p>
+              <h3 id="quote-title">Viaje a Cancún</h3>
+            </div>
+            <div class="quote-price-block">
+              <span class="quote-price" id="quote-total">USD 4.670</span>
+              <span class="quote-ars" id="quote-ars">ARS 5.510.600 aprox.</span>
+            </div>
+          </div>
+
+          <div class="quote-summary">
+            <div class="summary-pill" id="summary-route"></div>
+            <div class="summary-pill" id="summary-dates"></div>
+            <div class="summary-pill" id="summary-travelers"></div>
+          </div>
+
+          <div class="quote-breakdown">
+            <div class="breakdown-row"><span>Vuelos</span><strong id="price-flight"></strong></div>
+            <div class="breakdown-row">
+              <span>Alojamiento</span><strong id="price-hotel"></strong>
+            </div>
+            <div class="breakdown-row">
+              <span>Actividades</span><strong id="price-activities"></strong>
+            </div>
+            <div class="breakdown-row muted">
+              <span>Impuestos</span><strong id="price-taxes"></strong>
+            </div>
+            <div class="breakdown-row total">
+              <span>Total</span><strong id="price-total"></strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="deploy-grid" id="deploy">
+          <article class="panel deploy-card">
+            <p class="eyebrow">Deploy real</p>
+            <h3>Vercel para la app completa</h3>
+            <p>
+              El producto real necesita runtime Node.js para `app/api`, Redis, Stripe, Resend y
+              streaming del chat. La opción correcta es desplegar `apps/web` en Vercel.
+            </p>
+            <ol>
+              <li>Importar el repo en Vercel.</li>
+              <li>Elegir `apps/web` como root.</li>
+              <li>Cargar las variables de entorno.</li>
+              <li>Deploy con datos mock o con proveedores reales.</li>
+            </ol>
+          </article>
+
+          <article class="panel deploy-card secondary-card">
+            <p class="eyebrow">Publish rápido</p>
+            <h3>GitHub Pages para vidriera</h3>
+            <p>
+              Esta carpeta `docs/` se publica con GitHub Actions y sirve como demo comercial o
+              portfolio técnico, sin depender del backend.
+            </p>
+            <ol>
+              <li>Activar `GitHub Actions` en `Settings → Pages`.</li>
+              <li>Hacer push a `main`.</li>
+              <li>Compartir la URL pública de Pages.</li>
+            </ol>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
